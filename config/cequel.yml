@@ -1,0 +1,18 @@
+development:
+  host: '127.0.0.1:9160'
+  keyspace: cassandra_test_development
+
+test:
+  host: '127.0.0.1:9160'
+  keyspace: cassandra_test_test
+
+production:
+  hosts:
+    - 'cass1.cassandra_test.biz:9160'
+    - 'cass2.cassandra_test.biz:9160'
+    - 'cass3.cassandra_test.biz:9160'
+  keyspace: cassandra_test_production
+  thrift:
+    retries: 10
+    timeout: 15
+    connect_timeout: 15

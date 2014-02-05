@@ -1,0 +1,27 @@
+<h1>Listing users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.id.to_guid %></td>
+        <td><%= user.name %></td>
+        <td><%= link_to 'Show', action: :show, id: user.id.to_guid %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>
